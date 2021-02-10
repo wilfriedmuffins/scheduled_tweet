@@ -7,6 +7,7 @@
 class User < ApplicationRecord
     has_secure_password
 
+    before_save {self.email.downcase!}
                         
     #rubular forregular expression
     VALID_EMAIL_REGEX = /.+\@.+\..+/i
