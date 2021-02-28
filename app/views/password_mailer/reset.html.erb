@@ -1,0 +1,12 @@
+Hi <%= params[:user].email%>,
+
+Tu as oublier ton mot de passe?
+Pani pwoblem voici le liens ci dessous pour reinitialiser ton mots de passe, actif pendant 15 minutes alors faits vite
+
+Pas besoin de mettre a jour votre mot de passe ? Ignorez cet email, tout simplement. 
+
+Merci beaucoup
+
+<%= link_to "Reset password", password_reset_edit_url(token: @token)%>
+
+
