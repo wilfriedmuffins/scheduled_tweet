@@ -10,6 +10,7 @@ before_action :set_current_user
         end
     end
 
+    #if user no connected redirect to root with alert
     def require_user_logged_in!
         redirect_to sign_in_path, alert: "You must be signed in to do that." if Current.user.nil?
     end

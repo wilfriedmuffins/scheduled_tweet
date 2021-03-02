@@ -5,6 +5,7 @@
 # password_confirmation:string virtual
 
 class User < ApplicationRecord
+    #user can have many twitter
 
     has_many :twitter_accounts
     has_secure_password
