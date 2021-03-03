@@ -26,4 +26,5 @@ Rails.application.routes.draw do
 
   #create all link 
   resources :twitter_accounts
+  resources :tweets
 end

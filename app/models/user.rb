@@ -8,6 +8,7 @@ class User < ApplicationRecord
     #user can have many twitter
 
     has_many :twitter_accounts
+    has_many :tweets
     has_secure_password
 
     before_save {self.email.downcase!}

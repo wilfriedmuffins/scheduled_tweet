@@ -15,7 +15,7 @@ class TwitterAccountsController < ApplicationController
         #find(params[:id]) trouve l'id de l'user conecter
         
         @twitter_account.destroy
-        redirect_to twitter_accounts_path, notice: "successfully deconnected @#{twitter_account.username}"
+        redirect_to twitter_accounts_path, notice: "successfully deconnected @#{@twitter_account.username}"
     end
 
     private
