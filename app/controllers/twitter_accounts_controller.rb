@@ -1,7 +1,5 @@
 class TwitterAccountsController < ApplicationController
     before_action :require_user_logged_in!
-
-    
     before_action :set_twitter_account, only: [:destroy]
 
 
@@ -11,9 +9,7 @@ class TwitterAccountsController < ApplicationController
     end
 
     def destroy
-        #Current.user.twitter_accounts = récupère l'associaion des compte twiter utilisateur
-        #find(params[:id]) trouve l'id de l'user conecter
-        
+      
         @twitter_account.destroy
         redirect_to twitter_accounts_path, notice: "successfully deconnected @#{@twitter_account.username}"
     end
@@ -21,6 +17,8 @@ class TwitterAccountsController < ApplicationController
     private
 
     def set_twitter_account
+        #Current.user.twitter_accounts = récupère l'associaion des compte twiter utilisateur
+        #find(params[:id]) trouve l'id de l'user conecter
         @twitter_account = Current.user.twitter_accounts.find(params[:id])
     end
 end
